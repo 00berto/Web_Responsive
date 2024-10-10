@@ -1,0 +1,502 @@
+/*
+Septiembre 2024 Alberto Zani
+
+Prueba Final Curso Domestika
+'Introducción al Desarrollo Web Responsive con HTML y CSS'
+
+Creacion de una pagina Web responsive para una cafeteria 'Cafè Oslo'
+*/
+
+/* Programamos antes en pantalla pequeñas */
+
+/* Variables */
+
+:root {
+    --Rojo: #d03b40;
+    --Rojo-rgb: 208, 59, 64;
+    --Beige: #ded6c0;
+    --Blanco: #f5f0ed;
+    --Gris: #241d1b;
+    --Texto_claro: #f5f0ed;
+    --Texto_oscuro: #3c3c3b;
+    --Texto_oscuro-rbg: 60, 60, 59;
+}
+
+/* Especificaciones */
+h1 {
+    font-size: 44px;
+    scale: 0.8;
+}
+
+h2 {
+    font-size: 28px;
+    scale: 0.8;
+
+}
+
+h3 {
+    font-size: 24px;
+    scale: 0.8;
+}
+
+p {
+    font-size: 16px;
+    scale: 0.8;
+}
+
+button {
+    font-size: 14px;
+    scale: 0.8;
+}
+
+@font-face {
+    font-family: "opensans";
+    src: url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* capteristicas principales */
+
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: "opensans", sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.image-logo {
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    z-index: 1;
+    padding-left: 5px;
+}
+
+nav {
+    background-image: url(imagenes/Fondo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+}
+
+header {
+    width: 100%;
+    min-height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-flow: wrap;
+
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+hr {
+    height: 3px;
+    width: 30%;
+    background-color: var(--Texto_claro);
+    border: none;
+    margin: 16px auto;
+    /* animacion de la linea */
+    animation-name: movimiento_hr;
+    animation-duration: 12s;
+    animation-timing-function: cubic-bezier(.11, .34, .7, .46);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes movimiento_hr {
+    0% {
+        width: 10%
+    }
+
+    100% {
+        width: 55%;
+    }
+}
+
+/* menu desplegable */
+
+.lanzador-menu {
+    display: inline-block;
+    padding: 15px 15px;
+    background-color: var(--Rojo);
+    color: var(--Texto_claro);
+    text-decoration: none;
+    cursor: pointer;
+    right: 10px;
+    top: 5px;
+    position: absolute;
+}
+
+.lista-nav {
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    right: 10px;
+    top: 60px;
+    background-color: #d03b40;
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(var(--Texto_oscuro-rgb), 0.4);
+    z-index: 1;
+}
+
+.lista-menu {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.lista-menu li a {
+    display: block;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: var(--Texto_claro);
+}
+
+.lista-nav.activo {
+    display: block;
+}
+
+/* texto recien hecho */
+
+.header-text,
+.desayuno {
+    text-align: center;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 20px;
+    color: var(--Texto_claro);
+    margin: 20% auto;
+    width: 100%;
+}
+
+.header-text h1 {
+    margin-bottom: 15px;
+}
+
+/* bloque brunch y celebra tu fiesta */
+/* especificas comunes con contacto y espacios */
+
+.ofertas,
+.contactos_espacio {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    min-width: 200px;
+
+}
+
+.contactos_espacio>* {
+    width: 100%;
+}
+
+.ofertas h3,
+.contactos_espacio h2 {
+    margin: 15px;
+}
+
+.brunch hr,
+.fiesta hr,
+.text-contacto hr,
+.text-espacio hr {
+    height: 1px;
+    width: 0%;
+    animation-name: none;
+}
+
+.brunch,
+.fiesta,
+.text-contacto,
+.text-espacio {
+    background-color: var(--Rojo);
+    color: var(--Texto_claro);
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    min-height: 250px;
+}
+
+.fiesta,
+.text-contacto {
+    background-color: var(--Beige);
+    color: var(--Rojo);
+}
+
+/* bloque ven a desayunar */
+
+.desayuno {
+    background-image: url(imagenes/Fondo2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 20%;
+    min-width: 100%;
+    margin: auto;
+}
+
+.desayuno hr {
+    border: 1.5px solid;
+}
+
+.desayuno button {
+    width: 70%;
+    border: solid;
+    border-color: var(--Blanco);
+    background-color: transparent;
+    color: var(--Blanco);
+    cursor: pointer;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+/* bloque productos */
+
+.productos div {
+    flex: 1 1 100%;
+    min-width: 200px;
+}
+
+.productos h3 {
+    margin: 15px;
+}
+
+.productos {
+    background-color: var(--Blanco);
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-arrond;
+}
+
+.producto {
+    display: flex;
+    align-items: center;
+    margin: 20px 20px 20px 0px;
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+}
+
+.text-producto {
+    color: var(--Texto_oscuro);
+    text-align: center;
+    margin: 30px;
+    padding-top: 40px;
+    padding-right: 16px;
+    height: 200px;
+    width: 100%;
+}
+
+.text-producto h3 {
+    padding-bottom: 10px;
+}
+
+/* bloque contacto y donde estamos */
+
+.text-contacto a {
+    color: var(--Rojo);
+    text-decoration: none;
+}
+
+.text-espacio a {
+    color: var(--Texto_claro);
+    text-decoration: none;
+}
+
+/* footer y social */
+
+.footer {
+    background-color: var(--Gris);
+    color: var(--Texto_claro);
+    text-align: left;
+    padding: 20px;
+}
+
+.logosocial a img {
+    width: 18px;
+    height: auto;
+    border-radius: 28%;
+    margin-top: 16px;
+    gap: 3px;
+
+}
+
+/* Media Query */
+
+/* Pantallas medianas */
+
+
+@media screen and (min-width:200px) and (orientation: portrait) and ((-webkit-min-device-pixel-ratio: 2) or (min-resolution: 192dpi)) and (hover: none) and (pointer: coarse) {
+    .header-text {
+        font-size: 1.5em;
+    }
+}
+
+/* A partir de Pantallas medias */
+
+@media screen and (min-width: 768px) {
+
+    /* estilos */
+    h1,
+    h2,
+    h3,
+    p,
+    button {
+        scale: none;
+    }
+
+    .image-logo {
+        position: fixed;
+    }
+
+    .lista-menu li a:hover {
+        color: rgba(var(--Texto_oscuro-rgb), 0.8);
+    }
+
+    .header-text,
+    .desayuno {
+        scale: none;
+    }
+
+    /* cambio forma en los bloques*/
+
+    .ofertas {
+        flex-wrap: nowrap;
+    }
+
+    section .brunch,
+    section .fiesta,
+    section .text-contacto,
+    section .text-espacio {
+        flex-basis: calc(50%);
+    }
+
+    .producto {
+        flex-direction: row;
+    }
+
+}
+
+/* A partir de Pantallas grandes */
+
+@media screen and (min-width:1024px) and (orientation: landscape) and (hover: hover) and (pointer: fine) {
+
+    /* estilos */
+    .desayuno button:hover {
+        background-color: rgba(var(--Texto_oscuro-rbg), 0.6);
+        scale: 0.98;
+    }
+
+    .text-contacto a:hover,
+    .text-espacio a:hover {
+        color: rgba(var(--Texto_oscuro-rbg), 0.8);
+    }
+
+    /* animacion logo social*/
+    .logosocial a img:hover {
+
+        animation-name: movimiento_logo;
+        animation-duration: 1.5s;
+        animation-timing-function: cubic-bezier(1, 1, 0, 0);
+        animation-fill-mode: forwards;
+        animation-direction: alternate;
+    }
+
+    @keyframes movimiento_logo {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(1.5);
+        }
+    }
+
+    /* cambio menu */
+    .lanzador-menu {
+        display: none;
+    }
+
+    .lista-nav {
+        display: block;
+        position: absolute;
+        background-color: transparent;
+        right: 10px;
+        top: 30px;
+        scale: 0.92;
+    }
+
+    .lista-menu {
+        display: flex;
+        position: static;
+        justify-content: space-around;
+
+    }
+
+    .lista-menu li a:hover {
+        color: var(--Texto_claro);
+        text-decoration: underline;
+    }
+
+    @keyframes logoAnimation {
+        0% {
+            opacity: 1;
+            transform: scale(10);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    /* Animacion logo */
+
+    .image-logo {
+        animation: logoAnimation 2s cubic-bezier(.4, .68, .69, 1.11);
+
+    }
+
+    /* Bloque productos */
+
+    .producto {
+        width: 47%;
+        flex-direction: row;
+        margin-left: 5px;
+    }
+
+    .producto:nth-child(1),
+    .producto:nth-child(2) {
+        order: -1;
+
+    }
+
+
+    .producto:nth-child(3),
+    .producto:nth-child(4) {
+        order: 1;
+    }
+
+    .text-producto {
+        flex-grow: 1;
+        margin: 0 0 20px 10px;
+    }
+
+}

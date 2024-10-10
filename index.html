@@ -1,0 +1,205 @@
+<!-- Prueba Final Curso Domestika
+     Alberto Zani
+    'Introducción al Desarrollo Web Responsive con HTML y CSS'-->
+
+<!-- Creacion de una pagina Web responsive para una cafeteria 
+    'Cafè Oslo'-->
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prueba Final curso Domestika</title>
+  <!-- Importaciones - estilos -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <!-- logo -->
+    <div class="image-logo">
+      <a href="#logo">
+        <img src="imagenes/Logo.png" alt="logo" />
+      </a>
+    </div>
+    <nav>
+
+      <!-- menu -->
+      <a href="#" class="lanzador-menu" id="enlace-menu">MENÙ</a>
+      <div class="lista-nav" id="menu">
+
+        <ul class="lista-menu ">
+          <li><a href="#espacio">DONDE ESTAMOS</a></li>
+          <li><a href="#productos">PRODUCTOS</a></li>
+          <li><a href="#ofertas">OFERTAS</a></li>
+          <li><a href="#social">SIGUEMOS</a></li>
+          <li><a href="#contacto">RESERVAS Y CONTACTO</a></li>
+        </ul>
+      </div>
+
+      <!-- recién hecho -->
+      <section class="header-text">
+        <h1>RECIÉN HECHOS TODOS LOS DIAS</h1>
+        <hr />
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Saepe rerum eos sint magnam, quidem ad non
+          voluptatum doloremque laudantium. Facilis itaque cumque esse ipsa expedita error minus sit obcaecati
+          excepturi.
+          Obcaecati, amet voluptate, accusamus suscipit cumque voluptates autem ab voluptas quae, aperiam perferendis
+          dolor omnis ullam cum iure fugiat. Voluptatum assumenda architecto possimus excepturi corporis natus corrupti,
+          sit illum dolores!
+        </p>
+    </nav>
+
+    <!-- usamos <main> para el contenido principal de nuestra pagina web -->
+    <main>
+      <!-- id ofertas ( ven los domingo. fiestas, ven a desayunar)-->
+      <section id="ofertas">
+
+        <div class="brunch">
+          <hr />
+          <h3>VEN AL BRUNCH DE LOS DOMINGO</h3>
+          <hr />
+          <p>
+            Perspiciatis quam atque, molestias iure incidunt in libero totam
+            nemo dolorum consequuntur repudiandae doloremque neque saepe
+            dicta, temporibus consequatur esse rerum eum?
+          </p>
+        </div>
+
+        <div class="fiesta">
+          <hr />
+          <h3>CELEBRA TU FIESTAS CON NOSOTROS</h3>
+          <hr />
+          <p>
+            Molestias aspernatur animi expedita est inventore doloribus amet, iusto maxime, reprehenderit odio harum
+            exercitationem totam eius, sit nesciunt fugit ea dignissimos?
+            Aut exercitationem magnam maiores veniam hic illo excepturi recusandae atque iure nisi, earum dolore,
+            adipisci numquam fugit sit sapiente!
+          </p>
+        </div>
+      </section>
+
+      <!-- ven a desayunar -->
+      <div class="desayuno">
+        <h2>VEN A DESAYUNAR</h2>
+        <hr />
+        <p>
+          Perspiciatis quam atque, molestias iure incidunt in libero totam
+          nemo dolorum consequuntur repudiandae doloremque neque saepe
+          dicta, temporibus consequatur esse rerum eum?
+        </p>
+        <button>DESCUBRE NUESTROS PRODUCTOS</button>
+      </div>
+
+      <!-- id productos ( 4 productos)-->
+      <section id="productos">
+
+        <div class="producto">
+          <div id="icono">
+            <img src="imagenes/Icono1.png" alt="" />
+          </div>
+
+          <div class="text-producto">
+            <h3>PAN RECIÈN HECHO</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              nam voluptatem beatae quisquam, incidunt distinctio
+              praesentium excepturi tempora earum at atque soluta sequi
+            </p>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div id="icono">
+            <img src="imagenes/Icono2.png" alt="" />
+          </div>
+          <div class="text-producto">
+            <h3>TARTA CADA DIA</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              nam voluptatem beatae quisquam, incidunt distinctio
+              praesentium excepturi tempora earum at atque soluta sequi
+            </p>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div id="icono">
+            <img src="imagenes/Icono3.png" alt="" />
+          </div>
+          <div class="text-producto">
+            <h3>PRUEBA NUESTROS DULCES</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              nam voluptatem beatae quisquam, incidunt distinctio
+              praesentium excepturi tempora earum at atque soluta sequi
+            </p>
+          </div>
+        </div>
+
+        <div class="producto">
+          <div id="icono">
+            <img src="imagenes/Icono4.png" alt="" />
+          </div>
+          <div class="text-producto">
+            <h3>INGREDIENTES ECOLÓGICOS</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque
+              nam voluptatem beatae quisquam, incidunt distinctio
+              praesentium excepturi tempora earum at atque soluta sequi
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- id contacto (mail) y id espacio (donde estamos)-->
+      <section class="contactos_espacio">
+        <div class="text-contacto" id="contacto">
+          <h2>CONTACTA CON NOSOTROS</h2>
+          <hr>
+          <p>Si quieres hacer una reserva, tienes alguna sugerencia<br> o simplemente quieres saludar, escribenos a
+            <br>
+            <br>
+            <strong><a href="mailto:cafeoslo@cafeoslo.es">CAFEOSLO@CAFEOSLO.ES</a></strong>
+          </p>
+        </div>
+
+        <div class="text-espacio" id="espacio">
+          <h2>¿SABER DONDE ESTAMOS?</h2>
+          <hr>
+          <p>c/Major 15<br>00000 Barcelona
+            <br>
+            <br>
+            <strong><a href="https://www.google.com/maps/@?api=1&map_action=map">(GOOGLE MAPS)</a></strong>
+          </p>
+        </div>
+      </section>
+    </main>
+    </section>
+  </header>
+
+  <!-- footer -->
+  <footer class="footer" id="social">
+    <div class="derechos">
+      <p>
+        &copy; Septiembre 2024 - Todos los derechos reservados.
+      </p>
+    </div>
+    <!-- social -->
+    <div class="logosocial">
+      <a href="https://www.facebook.com/"><img src="imagenes/logofacebook.png"></a>
+      <a href="https://www.instagram.com/"><img src="imagenes/logoinstagram.png"></a>
+      <a href="https://x.com/?lang=es"><img src="imagenes/logoX.png"></a>
+    </div>
+
+  </footer>
+
+  <!--JAVASCRIPT-->
+  <script src="javascript.js"></script>
+
+</body>
+
+</html>
